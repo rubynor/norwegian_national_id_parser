@@ -1,8 +1,6 @@
-# NorwegianNationalIdParser
+# Norwegian national id parser
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/norwegian_national_id_parser`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+A simple way to valdiate and get information like date of birth and gender from a norwegian national id number.
 
 ## Installation
 
@@ -22,7 +20,21 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```Ruby
+national_id = NorwegianNationalIdParser.parse("13042046846")
+
+# Get date of birth
+national_id.birth_date
+# => 1920-04-13
+
+# Get the gender
+national_id.gender
+# => female
+
+# Get the age
+national_id.age
+# => 99
+```
 
 ## Development
 
@@ -32,10 +44,12 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/norwegian_national_id_parser. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
+Bug reports and pull requests are welcome on GitHub at https://github.com/rubynor/norwegian_national_id_parser. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
 
+## Credits
+
+![rubynor](http://rubynor.com/wp-content/uploads/2016/12/cropped-Rubynor_div.logoer-nettsidebanner.png)
