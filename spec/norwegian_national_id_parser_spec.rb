@@ -52,5 +52,13 @@ describe NorwegianNationalIdParser do
         }.not_to raise_error
       end
     end
+
+    it 'should return correct date of birth for a d-number' do
+      d_number = '65038300827'
+
+      parsed_id = described_class.parse(d_number)
+
+      expect(parsed_id.birth_date).to eq(Date.new(1983, 3, 25))
+    end
   end
 end
